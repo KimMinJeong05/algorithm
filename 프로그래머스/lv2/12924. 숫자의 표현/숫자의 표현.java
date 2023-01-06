@@ -1,4 +1,5 @@
 class Solution {
+    /* 1차 풀이
     public int solution(int n) {
         int answer = 0;
         int sum = 0;
@@ -15,6 +16,28 @@ class Solution {
                 sum+=next;
                 next++;
             }
+        }
+        
+        return answer;
+    }
+    */
+    // 좀 더 개선한 풀이
+    public int solution(int n) {
+        int answer = 0; 
+        int start = 1;
+        int sum = 0; 
+        
+        for(int end = 1; end<=n; end++){
+            sum+=end;
+
+            while(sum>n){
+                sum-=start++;
+            }
+            
+            if(sum==n){
+                answer++;
+            }
+           
         }
         
         return answer;

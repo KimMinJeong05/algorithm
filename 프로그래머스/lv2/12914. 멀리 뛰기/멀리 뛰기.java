@@ -1,3 +1,13 @@
+/*
+1 : 1
+2 : 1,1
+    2
+3 : 1,1,1 = 1,1 + 1
+    1,2   = 1 + 2
+    2,1   = 2 + 1
+=> n = (n-1) + (n-2)
+*/
+
 class Solution {
     public long solution(int n) {
         long[] arr = new long[n];
